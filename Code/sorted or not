@@ -1,0 +1,27 @@
+// finding whether array is sorted or not
+public class Main
+{
+	public static void main(String[] args) {
+	    int arr[]={1,2,3,5,6};
+	int result=largest(arr,arr.length);
+	if(result==1){
+	    System.out.print("sorted");
+	}
+	else{
+	    System.out.print("not sorted");
+	}
+		
+	}
+	public static int largest(int []arr,int n){
+	    for(int i=1;i<n;i++)
+	    {
+	        if(arr[i]>=arr[i-1]){
+	        }
+	        else{
+	            return -1;
+	        }
+	    }
+	    return 1;
+	}
+}
+
