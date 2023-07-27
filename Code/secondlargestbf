@@ -1,0 +1,29 @@
+// finding second largest element using brute force approach
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int arr[]={2,3,4,6,6,6};
+		System.out.println(largest(arr,4));
+	}
+	public static int largest(int []arr,int n){
+	    for(int i=0;i<n-1;i++){
+	        for(int j=1;j<n-i-1;j++){
+	            if(arr[i]>arr[i+1]){
+	                int temp=arr[i];
+	                arr[i]=arr[i+1];
+	                arr[i+1]=temp;
+	            }
+	        }
+	    }
+	    int slargest=0;
+	    for(int i=n-2;i>=0;i--){
+	        if(arr[i]!=arr[n-1]){
+	            slargest=arr[i];
+	            break;
+	        }
+	       
+	    }
+	    return slargest;
+	}
+}
