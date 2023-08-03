@@ -1,0 +1,29 @@
+// To find maximum length subarray with the target sum
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		int arr[]={1,2,5,6,7,1,1,8,4};
+		int a=sc.nextInt();
+		System.out.print(largest(arr,arr.length,a));
+		
+	}
+	public static int largest(int[]arr,int n,int target){
+	    int len=0;
+	    for(int i =0;i<n;i++){
+	        for(int j=i;j<n;j++){
+	            long sum=0;
+	            for(int k=i;k<j;k++){
+	                sum=sum+arr[k];
+	            }
+	                if(sum==target){
+	                len=Math.max(len,j-i+1);}
+	                
+	            
+	        }
+	    }
+	    return len;
+	}
+}
