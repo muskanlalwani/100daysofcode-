@@ -1,0 +1,9 @@
+import java.util.*;
+class Solution {
+    public boolean canWinNim(int n) {
+          return n % 4 != 0;
+    }
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    canWinNim(n);
+}
